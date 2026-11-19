@@ -1,4 +1,4 @@
-<p align="center"> <img src="https://raw.githubusercontent.com/⟨ORG⟩/.github/main/profile/logo.png" alt="DatePlan logo" width="120"> </p>
+<p align="center"> <img src="https://raw.githubusercontent.com/DatePlanApplication/.github/main/profile/logo.png" alt="DatePlan logo" width="120"> </p>
 
 <h1 align="center">DatePlan</h1>
 
