@@ -25,7 +25,7 @@ days together. It is built end to end by a solo developer, and every part of it
 |---|---|---|
 | [**DatePlan**](https://github.com/DatePlanApplication/DatePlan) | Mobile app. Android is on Google Play; iOS is experimental. | Kotlin Multiplatform, Compose Multiplatform |
 | [**dateplan-api-v2**](https://github.com/DatePlanApplication⟩/dateplan-api-v2) | Backend REST API: auth, couples, dates, memories, notifications. | Spring Boot, PostgreSQL, Redis |
-| [**Dateplan-Web**](https://github.com/DatePlanApplication/DatePlan-Web⟩) | Website, privacy policy and terms of use. | ⟨STACK_DO_SITE⟩ |
+| [**Dateplan-Web**](https://github.com/DatePlanApplication/DatePlan-Web⟩) | Website, privacy policy and terms of use. | HTML, CSS, JS |
 
 ## How the pieces fit
 
