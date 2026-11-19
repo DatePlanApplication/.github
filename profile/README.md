@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="⟨LINK_GOOGLE_PLAY⟩">Google Play</a> ·
+  <a href="https://play.google.com/store/apps/details?id=mayckgomes.com.dateplan">Google Play</a> ·
   <a href="https://dateplanapp.netlify.app">Website</a> ·
   <a href="mailto:mayckgomes.dev@gmail.com">Contact</a>
 </p>
@@ -74,20 +74,22 @@ Issues and pull requests are welcome.
 Everyone taking part follows our Code of Conduct.
 
 ## License
-
-Code is released under the **MIT License** (see each repository).
+ 
+Source code is **source-available** under the
+[PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0):
+you can read, study, modify and use it for **noncommercial** purposes
+(personal use, learning, research, hobby projects, nonprofits).
+Commercial use requires written permission from the author.
 The DatePlan name, logo and animations are not covered by the license.
-
+ 
 <details>
 <summary><b>🇧🇷 Em português</b></summary>
-
 O **DatePlan** é um app para casais planejarem encontros, guardarem memórias e
 contarem os dias juntos. Foi criado por um desenvolvedor solo, e app, API e
 site são desenvolvidos de forma aberta aqui.
-
+ 
 - **App:** Kotlin Multiplatform + Compose Multiplatform (Android na Google Play; iOS em desenvolvimento)
 - **API:** Spring Boot, PostgreSQL e Redis
 - **Contribuir:** leia o `CONTRIBUTING.md` de cada repositório. Para falhas de
   segurança, use o `SECURITY.md` em vez de abrir uma issue pública.
-
 </details>
