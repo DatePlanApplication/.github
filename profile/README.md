@@ -20,8 +20,7 @@
   <a href="#contributing">Contributing</a> ·
   <a href="#license">License</a>
 </p>
----
- 
+
 ## Why DatePlan
  
 Couples share a lot: plans, dates, small rituals and memories. Yet that shared
