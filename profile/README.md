@@ -150,6 +150,7 @@ flowchart LR
 - Hosted on **Netlify** at [dateplanapp.netlify.app](https://dateplanapp.netlify.app).
 - Contains the landing page with the link to the app, the **privacy policy** and the **terms of use** (LGPD/GDPR-oriented, in Portuguese and English).
 </details>
+
 ## Status
  
 | Area | State |
