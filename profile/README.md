@@ -20,6 +20,7 @@
   <a href="#contributing">Contributing</a> ·
   <a href="#license">License</a>
 </p>
+---
  
 ## Why DatePlan
  
@@ -78,14 +79,14 @@ flowchart LR
  
 | Repository | What it is | Main tech |
 |---|---|---|
-| [**DatePlan-App**](https://github.com/DatePlanApplication/DatePlan-App) | Mobile app. Android is live on Google Play; iOS is experimental. | Kotlin Multiplatform, Compose Multiplatform |
+| [**DatePlan**](https://github.com/DatePlanApplication/DatePlan) | Mobile app. Android is live on Google Play; iOS is experimental. | Kotlin Multiplatform, Compose Multiplatform |
 | [**DatePlan-API**](https://github.com/DatePlanApplication/DatePlan-API) | Backend REST API: authentication, couples, dates, memories, notifications. | Spring Boot, PostgreSQL, Redis |
 | [**DatePlan-Web**](https://github.com/DatePlanApplication/DatePlan-Web) | Website, privacy policy and terms of use. | HTML, CSS, JavaScript |
  
 ### Technical overview
  
 <details>
-<summary><b>📱 DatePlan-App (mobile)</b></summary>
+<summary><b>📱 DatePlan (mobile app)</b></summary>
 <br>
 **Modules**
  
@@ -115,7 +116,7 @@ flowchart LR
 - AdMob banners.
 **Quality and delivery**
  
-- Unit tests for view models and services; GitHub Actions workflow that builds the debug APK.
+- GitHub Actions workflow that builds the debug APK on every push and pull request.
 - Localized strings via Compose resources in 7 languages.
 **iOS status:** the shared UI runs; ads, push notifications, local reminders, the widget and Google sign-in are not implemented yet.
  
@@ -127,20 +128,19 @@ flowchart LR
  
 **Authentication and security**
  
-- JWT with separate **access** and **refresh** secrets and refresh-token rotation.
+- JWT **access** (15 min) and **refresh** (7 days) tokens, told apart by a `type` claim, with refresh-token rotation (each refresh token works once).
 - Redis-backed **token blacklist** for logout and revocation.
 - Passwords hashed with **Argon2id**.
 - Google sign-in verified on the server through the **Firebase Admin SDK**.
-- Custom Spring Security filter chain with dedicated authentication-entry-point and access-denied handlers, returning consistent error responses.
-- Rate limiting at the reverse proxy.
+- Custom security filter that rejects expired, invalid or blacklisted tokens with consistent JSON errors; stateless API (no sessions, no cookies).
+- Rate limiting and TLS at the NGINX reverse proxy in front of the API.
 **Domain**
  
-- Users and couples (invites between two accounts), dates, memories and a plan/subscription model.
+- Users and couples (invites between two accounts), dates, memories and a per-user plan field.
 - Schema changes versioned with **Flyway** migrations.
 **Operations**
  
 - Runs as a `systemd` service on an Oracle Cloud VM behind **NGINX** with Let's Encrypt TLS.
-- Observability with Spring Boot Actuator, Micrometer, Prometheus and Grafana.
 - **GitHub Actions** builds the JAR and deploys it over SSH/SCP.
 - JVM and swap tuned for a small-memory instance.
 </details>
@@ -151,7 +151,6 @@ flowchart LR
 - Hosted on **Netlify** at [dateplanapp.netlify.app](https://dateplanapp.netlify.app).
 - Contains the landing page with the link to the app, the **privacy policy** and the **terms of use** (LGPD/GDPR-oriented, in Portuguese and English).
 </details>
-
 ## Status
  
 | Area | State |
@@ -159,6 +158,7 @@ flowchart LR
 | Android app | Live on Google Play |
 | iOS app | Experimental, in progress |
 | API | In production |
+| Source code | Being published gradually, starting with the app |
  
 ## Contributing
  
